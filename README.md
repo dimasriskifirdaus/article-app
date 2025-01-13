@@ -31,6 +31,7 @@ CREATE TABLE comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     article_id INT NOT NULL,
     content TEXT NOT NULL,
+    parent_id INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (article_id) REFERENCES Articles(id) ON DELETE CASCADE
 );
